@@ -1,0 +1,37 @@
+header {
+    font: 25pt bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: red;
+    border-radius: 20px 20px 0 0;
+    color: orange;
+    padding: 10px;
+    text-align: center;
+}
+
+nav {
+    font: 25pt bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: green;
+    color: yellow;
+    padding: 10px;
+    text-align: center;
+}
+
+main {
+    font: 25pt bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: beige;
+    color: blueviolet;
+    padding: 10px;
+    text-align: center;
+}
+
+footer {
+    font: 25pt bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aquamarine;
+    border-radius: 0 0 20px 20px;
+    color: brown;
+    padding: 10px;
+    text-align: center;
+}

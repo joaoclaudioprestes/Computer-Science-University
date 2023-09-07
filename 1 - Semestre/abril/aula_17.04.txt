@@ -1,0 +1,38 @@
+----------------------Estrutura ----------------------
+seletor {
+    propriedade: valor;
+}
+
+Ex:
+
+h1 {
+    background-color: red;
+}
+
+------------------------------------------------------
+
+Comentário em CSS
+-> /*Comentário*/
+
+------------------------------------------------------
+Agrupamento de seletores
+
+h1,h2,h3 {
+    font: bold 12px arial;
+}
+------------------------------------------------------
+background-repeat: repeat-y, repeat, no-repeat; ---- repetir ou não uma imagem...
+
+------------------------------------------------------
+Unidades de medidas
+Absolutas: px, pt, q, p. 
+Relativas: em, rem, ex, ch.  (em: 10x o tamanho da font -- rem: ao tamanho da fonte(font-size) do elemento raiz)
+
+Tamanhos relativos
+vw: 1% da largura da viewport;
+vh: 1% da altura da viewport;
+vmin: a menor medida entre vw e vh;
+vmax: o maior medida entre vw e vh;
+------------------------------------------------------
+Box:
+Inline:

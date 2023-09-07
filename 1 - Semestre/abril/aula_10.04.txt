@@ -1,0 +1,34 @@
+Cores
+Nome (Inglês)
+RGB (___,____,____)   ---- color: rgb(8,250,30);  ---- Valor máximo == 255   ---- RGBA (define a transparencia) == rgba(8,250,30,0.5)
+Hexa #_ _ _ _ _ _ ---- color: #c5e21f         (0,1,2,3,4,5,6,7,8,9 - A,B,C,D,E,F,G)
+Web safe #     - usar quando os caracteres se repetem... básicamente é resumir, ex: #ccee11 == #ce1 utilizar somente se ouver 3 repetições e ambos os conjuntos serem iguais.
+atributo => valor
+
+
+color: blue;
+
+
+
+CSS - Cascading Style Sheets (Folhas de estilo em cascata)
+
+<link rel="stylesheet" heref="style.css" type="text/css"</link>
+
+Onde podemos escrever códigos css:
+Externa - separadas do arquivo html == .css - todos os documentos
+Interna - juntos do arquivo html => <head> </head> - somente a página em questão
+Inline - juntos do arquivo html é na mesma linha == <h1>Hello</h1> - somente a linha de código
+
+Formato de pastas
+
+Estrutura CSS:
+Seletor: elemento que será tratado pela regra, ele seleciona onde será realizado a modificação ou (id="nome" e class="nomeTag")
+Propriedade: é qual regra será alterada.
+Valor:
+
+
+id = único = =cpf...
+class = para um grupo...
+
+Ordem de precedencia: 
+

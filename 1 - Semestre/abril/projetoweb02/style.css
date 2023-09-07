@@ -1,0 +1,33 @@
+/*body {
+    background-image: url(img/banner1.jpg);
+    background-repeat: repeat-y, repeat, no-repeat; ---- repetir ou não uma imagem... 
+    background-size: 100%;
+*/
+
+main {
+    background-color: rgba(0, 0, 0, 0.228);
+    padding-top: 10px;
+    margin: 20px;
+    border-left: solid 5px;
+}
+
+nav {
+    background-color: red;
+    margin-left: 5px;
+    border-bottom: solid 10px;
+    padding-bottom: 50px;
+}
+
+.link1 {
+    background-color: aqua;
+    margin-right: 8px;
+    padding-top: 6px;
+    border-right: solid 3px;
+}
+
+.link2 {
+    background-color: blueviolet;
+    margin: 10px;
+    padding: 5px;
+    border: solid 2px;
+}
