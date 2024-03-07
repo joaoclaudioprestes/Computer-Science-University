@@ -1,9 +1,9 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
-package com.mycompany.calculadora;
+package lpoo.projeto.calculadora.calculadora;
 
-import visualizacao.frmCalculadora;
+import lpoo.projeto.calculadora.visualizacao.frmCalculadora;
 
 /**
  *

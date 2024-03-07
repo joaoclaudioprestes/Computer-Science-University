@@ -2,9 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JDialog.java to edit this template
  */
-package visualizacao;
+package lpoo.projeto.calculadora.visualizacao;
 
-import metodos.Controle;
+import lpoo.projeto.calculadora.metodos.Controle;
 
 /**
  *
