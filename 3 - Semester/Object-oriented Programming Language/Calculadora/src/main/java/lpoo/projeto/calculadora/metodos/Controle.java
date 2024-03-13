@@ -8,8 +8,7 @@ package lpoo.projeto.calculadora.metodos;
  *
  * @author joaop
  */
-public class Controle
-{
+public class Controle {
 
     public String numberS1;
     public String numberS2;
@@ -18,36 +17,23 @@ public class Controle
     public String resultado;
     public String operador;
 
-    public void Executar()
-    {
+    public void executar() {
         Validacao validacao = new Validacao();
         validacao.numberS1 = this.numberS1;
         validacao.numberS2 = this.numberS2;
-        validacao.Validar();
+        validacao.operacao = this.operador;
+        validacao.validar();
 
-        if (validacao.mensagem.equals(""))
-        {
+        if (validacao.mensagem.equals("")) {
             Operacao operacao = new Operacao();
             operacao.number1 = validacao.number1;
             operacao.number2 = validacao.number2;
+            operacao.operador = this.operador;
 
-            if (this.operador.equals("+"))
-            {
-                operacao.Somar();
-            } else if (this.operador.equals("-"))
-            {
-                operacao.Subtrair();
-            } else if (this.operador.equals("x"))
-            {
-                operacao.Multiplicar();
-            } else if (this.operador.equals("/"))
-            {
-                operacao.Dividir();
-            }
+            operacao.calcular();
 
             this.resultado = operacao.resposta.toString();
-        } else
-        {
+        } else {
             this.resultado = validacao.mensagem;
         }
     }

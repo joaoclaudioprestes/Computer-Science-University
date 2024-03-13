@@ -8,30 +8,24 @@ package lpoo.projeto.calculadora.metodos;
  *
  * @author joaop
  */
-public class Operacao
-{
+public class Operacao {
 
     public Integer number1;
     public Integer number2;
     public Integer resposta;
+    public String operador;
 
-    public void Somar()
-    {
-        this.resposta = this.number1 + this.number2;
-    }
+    public void calcular() {
 
-    public void Subtrair()
-    {
-        this.resposta = this.number1 - this.number2;
-    }
+        if (this.operador.equals("+")) {
+            this.resposta = this.number1 + this.number2;
+        } else if (this.operador.equals("-")) {
+            this.resposta = this.number1 - this.number2;
+        } else if (this.operador.equals("x")) {
+            this.resposta = this.number1 * this.number2;
+        } else if (this.operador.equals("/")) {
+            this.resposta = this.number1 / this.number2;
+        }
 
-    public void Multiplicar()
-    {
-        this.resposta = this.number1 * this.number2;
-    }
-
-    public void Dividir()
-    {
-        this.resposta = this.number1 / this.number2;
     }
 }

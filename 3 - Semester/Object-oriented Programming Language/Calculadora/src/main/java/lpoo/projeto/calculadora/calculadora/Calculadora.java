@@ -16,5 +16,6 @@ public class Calculadora
     {
         frmCalculadora frm = new frmCalculadora(null, true);
         frm.setVisible(true);
+        System.exit(0);
     }
 }
