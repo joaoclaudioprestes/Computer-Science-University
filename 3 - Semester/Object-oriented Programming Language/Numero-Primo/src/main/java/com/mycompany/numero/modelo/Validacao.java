@@ -8,9 +8,16 @@ public class Validacao {
 
     public Validacao(String numero) {
         this.numero = numero;
+        Executar();
     }
 
     private void Executar() {
+        try {
+            this.num = Integer.parseInt(this.numero);
+
+        } catch (Exception e) {
+            this.mensagem = "Número inválido!";
+        }
     }
 
     public int getNum() {

@@ -8,10 +8,15 @@ public class Controle {
 
     public Controle(String numero) {
         this.numero = numero;
+        Executar();
     }
 
     private void Executar() {
+        Validacao validar = new Validacao(this.numero);
 
+        if (validar.getMensagem().equals("")) {
+            Primo isPrimo = new Primo(validar.getNum());
+        }
     }
 
     public String getMensagem() {

@@ -33,6 +33,7 @@ public class frmPrincipal extends javax.swing.JDialog {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Verificador - Primo");
+        setBackground(new java.awt.Color(255, 255, 255));
 
         txfNumero.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txfNumero.addActionListener(new java.awt.event.ActionListener() {
@@ -65,7 +66,7 @@ public class frmPrincipal extends javax.swing.JDialog {
                     .addComponent(btnVerificar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(lblTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(txfNumero)
-                    .addComponent(lblResposta, javax.swing.GroupLayout.DEFAULT_SIZE, 342, Short.MAX_VALUE))
+                    .addComponent(lblResposta, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
