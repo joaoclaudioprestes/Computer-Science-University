@@ -12,6 +12,7 @@ public class Validacao {
     }
 
     private void Executar() {
+        this.mensagem = "";
         try {
             this.num = Integer.parseInt(this.numero);
 

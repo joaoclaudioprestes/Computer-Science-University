@@ -1,8 +1,11 @@
-package com.mycompany.numero.visualizacao;/*
+package com.mycompany.numero.visualizacao;
+
+import com.mycompany.numero.modelo.Controle;
+
+/*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JDialog.java to edit this template
  */
-
 /**
  *
  * @author joaop
@@ -50,6 +53,11 @@ public class frmPrincipal extends javax.swing.JDialog {
 
         btnVerificar.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         btnVerificar.setText("Verificar");
+        btnVerificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVerificarActionPerformed(evt);
+            }
+        });
 
         lblResposta.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         lblResposta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -91,10 +99,23 @@ public class frmPrincipal extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_txfNumeroActionPerformed
 
+    private void btnVerificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerificarActionPerformed
+        // TODO add your handling code here:
+
+        Controle controle = new Controle(this.txfNumero.getText());
+
+        if (!controle.getMensagem().equals("")) {
+            this.lblResposta.setText(controle.getResposta());
+        } else {
+            this.lblResposta.setText(controle.getMensagem());
+        }
+
+    }//GEN-LAST:event_btnVerificarActionPerformed
+
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.

@@ -4,6 +4,8 @@
 
 package com.mycompany.numero.primo;
 
+import com.mycompany.numero.visualizacao.frmPrincipal;
+
 /**
  *
  * @author joaop
@@ -11,7 +13,8 @@ package com.mycompany.numero.primo;
 public class NumeroPrimo {
 
     public static void main(String[] args) {
-       
-        
+        frmPrincipal frm = new frmPrincipal(null, true);
+        frm.setVisible(true);
+        System.exit(0);
     }
 }

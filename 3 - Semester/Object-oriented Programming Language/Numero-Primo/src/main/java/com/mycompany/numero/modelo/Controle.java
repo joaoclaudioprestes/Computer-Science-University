@@ -14,8 +14,11 @@ public class Controle {
     private void Executar() {
         Validacao validar = new Validacao(this.numero);
 
-        if (validar.getMensagem().equals("")) {
+        if (validar.getMensagem() != null && !validar.getMensagem().isEmpty()) {
             Primo isPrimo = new Primo(validar.getNum());
+            this.resposta = isPrimo.getResposta();
+        } else {
+            this.mensagem = validar.getMensagem();
         }
     }
 
@@ -26,5 +29,4 @@ public class Controle {
     public String getResposta() {
         return resposta;
     }
-
 }
