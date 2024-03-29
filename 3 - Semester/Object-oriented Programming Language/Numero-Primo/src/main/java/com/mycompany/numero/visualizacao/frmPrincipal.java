@@ -101,10 +101,10 @@ public class frmPrincipal extends javax.swing.JDialog {
 
     private void btnVerificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerificarActionPerformed
         // TODO add your handling code here:
-
+        
         Controle controle = new Controle(this.txfNumero.getText());
 
-        if (!controle.getMensagem().equals("")) {
+        if (controle.getMensagem().equals("")) {
             this.lblResposta.setText(controle.getResposta());
         } else {
             this.lblResposta.setText(controle.getMensagem());

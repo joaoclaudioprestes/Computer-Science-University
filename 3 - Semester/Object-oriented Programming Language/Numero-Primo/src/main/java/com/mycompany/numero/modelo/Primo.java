@@ -14,14 +14,15 @@ public class Primo {
 
         this.resposta = "É primo!";
 
-        if (this.num <= 1) {
+        if (this.num < 2) {
             this.resposta = "Não é primo!";
-            return;
         }
 
-        for (int i = 2; i <= this.num / 2 + 1; i++) {
-            this.resposta = "Não é primo!";
-            return;
+        for (int i = 2; i < this.num; i++) {
+            if (this.num % i == 0) {
+                this.resposta = "Não é primo!";
+                break;
+            }
         }
     }
 

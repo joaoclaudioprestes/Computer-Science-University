@@ -12,9 +12,12 @@ public class Controle {
     }
 
     private void Executar() {
+        this.mensagem = "";
+        this.resposta = "";
+
         Validacao validar = new Validacao(this.numero);
 
-        if (validar.getMensagem() != null && !validar.getMensagem().isEmpty()) {
+        if (validar.getMensagem().equals("")) {
             Primo isPrimo = new Primo(validar.getNum());
             this.resposta = isPrimo.getResposta();
         } else {
