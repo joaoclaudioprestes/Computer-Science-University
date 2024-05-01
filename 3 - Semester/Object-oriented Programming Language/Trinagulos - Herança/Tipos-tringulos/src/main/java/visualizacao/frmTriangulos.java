@@ -4,6 +4,8 @@
  */
 package visualizacao;
 
+import Modelo.Controle;
+
 /**
  *
  * @author joaop
@@ -37,7 +39,7 @@ public class frmTriangulos extends javax.swing.JDialog {
         lblLadoTres = new javax.swing.JLabel();
         lblTitulo = new javax.swing.JLabel();
         btnResultado = new javax.swing.JButton();
-        lblTitulo1 = new javax.swing.JLabel();
+        lblResultado = new javax.swing.JLabel();
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -59,15 +61,15 @@ public class frmTriangulos extends javax.swing.JDialog {
 
         lblTitulo.setText("Tipos de Tringulos");
 
-        btnResultado.setText("jButton1");
+        btnResultado.setText("Verificar");
         btnResultado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnResultadoActionPerformed(evt);
             }
         });
 
-        lblTitulo1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTitulo1.setText("Resultado");
+        lblResultado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblResultado.setText("Resultado");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -94,7 +96,7 @@ public class frmTriangulos extends javax.swing.JDialog {
                         .addGap(66, 66, 66)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(lblTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lblTitulo1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblResultado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnResultado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -118,7 +120,7 @@ public class frmTriangulos extends javax.swing.JDialog {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
                 .addComponent(btnResultado)
                 .addGap(32, 32, 32)
-                .addComponent(lblTitulo1)
+                .addComponent(lblResultado)
                 .addGap(23, 23, 23))
         );
 
@@ -127,6 +129,13 @@ public class frmTriangulos extends javax.swing.JDialog {
 
     private void btnResultadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResultadoActionPerformed
         // TODO add your handling code here:
+        Controle controle = new Controle(this.txfLadoUm.getText(), this.txfLadoDois.getText(), this.txfLadoTres.getText());
+
+        if(controle.mensagem.equals("")) {
+            this.lblResultado.setText(controle.resposta);
+        } else {
+            this.lblResultado.setText(controle.mensagem);
+        }
     }//GEN-LAST:event_btnResultadoActionPerformed
 
     private void txfLadoUmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txfLadoUmActionPerformed
@@ -182,8 +191,8 @@ public class frmTriangulos extends javax.swing.JDialog {
     private javax.swing.JLabel lblLadoDois;
     private javax.swing.JLabel lblLadoTres;
     private javax.swing.JLabel lblLadoUm;
+    private javax.swing.JLabel lblResultado;
     private javax.swing.JLabel lblTitulo;
-    private javax.swing.JLabel lblTitulo1;
     private javax.swing.JTextField txfLadoDois;
     private javax.swing.JTextField txfLadoTres;
     private javax.swing.JTextField txfLadoUm;
