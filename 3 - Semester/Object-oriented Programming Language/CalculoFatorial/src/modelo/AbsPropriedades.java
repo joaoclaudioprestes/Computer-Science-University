@@ -1,28 +1,21 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package modelo;
 
-/**
- *
- * @author joaop
- */
-public abstract class AbsPropriedades implements IMetodos {
-    
-    // IMetodos obriga as classes filhas a utilziarem seus métodos....
-
+public abstract class AbsPropriedades implements IMetodos
+{
     protected String numero;
     protected Integer num;
 
-    public AbsPropriedades(String numero) {
+    public AbsPropriedades(String numero)
+    {
         this.numero = numero;
-
+        this.Executar();
     }
 
-    public AbsPropriedades(Integer num) {
+    public AbsPropriedades(Integer num)
+    {
         this.num = num;
-
+        this.Executar();
     }
-
+    
+    
 }
