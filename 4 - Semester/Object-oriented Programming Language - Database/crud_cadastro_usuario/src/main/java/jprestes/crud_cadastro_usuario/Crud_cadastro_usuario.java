@@ -13,7 +13,7 @@ import apresentacao.frmPrincipal;
 public class Crud_cadastro_usuario {
 
     public static void main(String[] args) {
-        frmPrincipal frmP = new frmPrincipal(null, true);
-        frmP.setVisible(true);
+        frmPrincipal frm = new frmPrincipal(null, true);
+        frm.setVisible(true);
     }
 }

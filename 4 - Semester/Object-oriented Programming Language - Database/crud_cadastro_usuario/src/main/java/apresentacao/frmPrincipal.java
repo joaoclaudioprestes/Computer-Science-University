@@ -4,6 +4,11 @@
  */
 package apresentacao;
 
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.JOptionPane;
+import modelo.Controle;
+
 /**
  *
  * @author joaop
@@ -11,7 +16,7 @@ package apresentacao;
 public class frmPrincipal extends javax.swing.JDialog {
 
     /**
-     * Creates new form frmPessoal
+     * Creates new form frmPrincipal
      */
     public frmPrincipal(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
@@ -27,48 +32,118 @@ public class frmPrincipal extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jMenu1 = new javax.swing.JMenu();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu2 = new javax.swing.JMenu();
-        mniCadastro = new javax.swing.JMenuItem();
-
-        jMenu1.setText("jMenu1");
+        btnCadastrar = new javax.swing.JButton();
+        lblNome = new javax.swing.JLabel();
+        txfNome = new javax.swing.JTextField();
+        txfCPF = new javax.swing.JTextField();
+        lblCPF = new javax.swing.JLabel();
+        lblRG = new javax.swing.JLabel();
+        txfRG = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Cadastro de Usuário");
 
-        jMenu2.setText("Menu");
-
-        mniCadastro.setText("Cadastrar");
-        mniCadastro.addActionListener(new java.awt.event.ActionListener() {
+        btnCadastrar.setText("Cadastrar");
+        btnCadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mniCadastroActionPerformed(evt);
+                btnCadastrarActionPerformed(evt);
             }
         });
-        jMenu2.add(mniCadastro);
 
-        jMenuBar1.add(jMenu2);
+        lblNome.setText("Nome:");
 
-        setJMenuBar(jMenuBar1);
+        txfNome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txfNomeActionPerformed(evt);
+            }
+        });
+
+        txfCPF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txfCPFActionPerformed(evt);
+            }
+        });
+
+        lblCPF.setText("CPF:");
+
+        lblRG.setText("RG:");
+
+        txfRG.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txfRGActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 369, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnCadastrar))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(63, 63, 63)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblCPF)
+                            .addComponent(lblNome)
+                            .addComponent(lblRG))
+                        .addGap(37, 37, 37)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txfCPF)
+                            .addComponent(txfNome)
+                            .addComponent(txfRG, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 243, Short.MAX_VALUE))))
+                .addGap(27, 27, 27))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 236, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(53, 53, 53)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblNome)
+                    .addComponent(txfNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblCPF)
+                    .addComponent(txfCPF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblRG)
+                    .addComponent(txfRG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 139, Short.MAX_VALUE)
+                .addComponent(btnCadastrar)
+                .addGap(23, 23, 23))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void mniCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniCadastroActionPerformed
+    private void txfNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txfNomeActionPerformed
         // TODO add your handling code here:
-        frmCadastro frmCadastro = new frmCadastro(null, true);
-        frmCadastro.setVisible(true);
-    }//GEN-LAST:event_mniCadastroActionPerformed
+    }//GEN-LAST:event_txfNomeActionPerformed
+
+    private void txfCPFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txfCPFActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txfCPFActionPerformed
+
+    private void txfRGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txfRGActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txfRGActionPerformed
+
+    private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
+        // TODO add your handling code here:
+        List<String> listUsuario = new ArrayList<>();
+        listUsuario.add(txfNome.getText());
+        listUsuario.add(txfRG.getText());
+        listUsuario.add(txfCPF.getText());
+        
+        Controle cont = new Controle();
+        cont.cadastrar(listUsuario);
+        
+        JOptionPane.showMessageDialog(null, cont.mensagem);
+    }//GEN-LAST:event_btnCadastrarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -96,7 +171,6 @@ public class frmPrincipal extends javax.swing.JDialog {
             java.util.logging.Logger.getLogger(frmPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        //</editor-fold>
 
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -114,9 +188,12 @@ public class frmPrincipal extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem mniCadastro;
+    private javax.swing.JButton btnCadastrar;
+    private javax.swing.JLabel lblCPF;
+    private javax.swing.JLabel lblNome;
+    private javax.swing.JLabel lblRG;
+    private javax.swing.JTextField txfCPF;
+    private javax.swing.JTextField txfNome;
+    private javax.swing.JTextField txfRG;
     // End of variables declaration//GEN-END:variables
 }
