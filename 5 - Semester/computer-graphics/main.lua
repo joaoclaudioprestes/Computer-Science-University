@@ -33,7 +33,7 @@ function love.draw()
 
   love.graphics.setColor(1, 1, 1)
   for _, estrela in ipairs(estrelas) do
-    love.graphics.circle("fill", estrela[1], estrela[2], 3)
+    love.graphics.circle("fill", estrela[1], estrela[2], 3, 100)
   end
 
   -- Draw a white arc
